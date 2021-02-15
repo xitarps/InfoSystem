@@ -30,6 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt-BR:
+  login: 'entrar'
+  logout: 'sair'
+  signup: 'registrar'
   home:
     index:
       title: 'Bem Vindo!'

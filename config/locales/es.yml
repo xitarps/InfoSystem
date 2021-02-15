@@ -30,6 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 es:
+  login: 'entrar'
+  logout: 'salir'
+  signup: 'registrar'
   home:
     index:
       title: 'Bien Venido!'

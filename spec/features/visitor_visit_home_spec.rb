@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-feature 'user visit homepage' do
+feature 'visitor visit homepage' do
   scenario 'successfully(default)' do
     visit root_path
     expect(page).to  have_content(I18n.t('home.index.title'))
