@@ -34,6 +34,9 @@ group :development, :test do
 
   # rubocop - https://github.com/rubocop-hq/rubocop-rails
   gem 'rubocop-rails', require: false
+
+  # rspec - https://github.com/rspec/rspec-rails
+  gem 'rspec-rails', '~> 4.0.2'
 end
 
 group :development do
