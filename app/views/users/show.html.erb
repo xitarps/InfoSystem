@@ -1,0 +1,32 @@
+<p>
+  <%= @user.email %> | 
+</p>
+
+
+
+<%= form_with(model: @user, url: toggle_admin_path , local: true) do |form| %>
+
+  <%= form.label :admin, t('.admin') %>:
+
+  <%= form.hidden_field :id, value: @user.id %>
+
+  <div class="custom-control custom-switch">
+    <%= form.check_box :admin, class: "custom-control-input", id: "customSwitch_admin_toggle"   %>
+    <label class="custom-control-label" for="customSwitch_admin_toggle"></label>
+  </div>
+
+  <div class="btn">
+    <%= form.button :submit , id: 'btn_send_toggle_admin', style: 'display: none;' do %>
+      botao
+    <% end %>
+  </div>
+<% end %>
+
+
+<script>
+  document.querySelector('#customSwitch_admin_toggle').addEventListener('change',(evt)=>{
+    document.querySelector('#btn_send_toggle_admin').click()
+  })
+</script>
+
+<%= link_to t(:back), :back %> |

@@ -1,6 +1,7 @@
 require: rubocop-rails
 
 AllCops:
+  SuggestExtensions: false
   NewCops: enable 
   TargetRubyVersion: 3.0.0
   Exclude:

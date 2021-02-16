@@ -33,6 +33,8 @@ es:
   login: 'entrar'
   logout: 'salir'
   signup: 'registrar'
+  manage: 'gerenciar(es)'
+  details: 'detalhes(es)'
   home:
     index:
       title: 'Bien Venido!'

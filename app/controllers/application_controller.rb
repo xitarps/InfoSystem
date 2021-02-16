@@ -12,4 +12,10 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
+
+  def require_admin
+    message = 'Oops, something went wrong!'
+    is_admin = user_signed_in? && current_user.admin?
+    return redirect_to root_path, alert: message unless is_admin
+  end
 end

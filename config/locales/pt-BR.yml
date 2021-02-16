@@ -33,6 +33,8 @@ pt-BR:
   login: 'entrar'
   logout: 'sair'
   signup: 'registrar'
+  manage: 'gerenciar'
+  details: 'detalhes'
   home:
     index:
       title: 'Bem Vindo!'
