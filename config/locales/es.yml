@@ -42,6 +42,7 @@ es:
   add_more_friends: 'Adicionar mais amigos(es)'
   add_friends: 'adicionar amigos(es)'
   articles: 'artigos(es)'
+  videos: 'videos(es)'
   create_article: 'criar artigo(es)'
   title_pt_br: 'título(pt-BR)'
   title_es: 'título(es)'
@@ -49,7 +50,8 @@ es:
   description_es: 'texto(es)'
   save: 'salvar(es)'
   edit: 'editar(es)'
-  delete: 'deltar(es)'
+  delete: 'deletar(es)'
+  add_video: 'adicionar video(es)'
   home:
     index:
       title: 'Bien Venido!'

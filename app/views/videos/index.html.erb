@@ -1,0 +1,63 @@
+<p>
+  <%= link_to t(:add_video), new_video_path %>
+</p>
+
+<% if I18n.locale == :es %>
+
+  <table>
+    <thead>
+      <tr>
+        <th><%= t(:title) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @videos.each do |video| %>
+        <tr>
+          <td><%= link_to video.title_es, video %></td>
+
+          <% if current_user.admin? %>
+            <p>
+              <td> | <%= link_to t(:edit), edit_video_path(video) %></td>
+              <td> | <%= link_to t(:delete), video, method: :delete %></td>
+            </p>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+  
+  
+
+<% elsif I18n.locale == :'pt-BR' %>
+  
+  <table>
+    <thead>
+      <tr>
+        <th><%= t(:title) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @videos.each do |video| %>
+        <tr>
+          <td><%= link_to video.title_pt_br, video %></td>
+
+          <% if current_user.admin? %>
+            <p>
+              <td> | <%= link_to t(:edit), edit_video_path(video) %></td>
+              <td> | <%= link_to t(:delete), video, method: :delete %></td>
+            </p>
+          <% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+<% end %>

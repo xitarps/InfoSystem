@@ -1,0 +1,47 @@
+
+
+<% if I18n.locale == :es %>
+
+  <h5>
+    <%= @video.title_es %>
+  </h5>
+  <p>
+    <video controls width="640" height="480" src="<%= @video.file %>"></video>
+  </p>
+  <p>
+    <%= @video.description_es%>
+  </p>
+  <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+    <%= @video.user.email%>
+  </cite>
+  
+  <% if current_user.admin? %>
+    <p>
+      <%= link_to t(:edit), edit_video_path(@video) %> | 
+      <%= link_to t(:delete), @video, method: :delete %>
+    </p>
+  <% end %>
+
+<% elsif I18n.locale == :'pt-BR' %>
+  
+  <h5>
+    <%= @video.title_pt_br %>
+  </h5>
+  <p>
+    <video controls width="640" height="480" src="<%= @video.file %>"></video>
+  </p>
+  <p>
+    <%= @video.description_pt_br%>
+  </p>
+  <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+    <%= @video.user.email%>
+  </cite>
+  
+  <% if current_user.admin? %>
+    <p>
+      <%= link_to t(:edit), edit_video_path(@video) %> | 
+      <%= link_to t(:delete), @video, method: :delete %>
+    </p>
+  <% end %>
+
+<% end %>

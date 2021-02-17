@@ -42,6 +42,7 @@ pt-BR:
   friends: 'amigos'
   add_friends: 'adicionar amigos'
   articles: 'artigos'
+  videos: 'videos'
   create_article: 'criar artigo'
   title_pt_br: 'título(pt-BR)'
   title_es: 'título(es)'
@@ -49,7 +50,8 @@ pt-BR:
   description_es: 'texto(es)'
   save: 'salvar'
   edit: 'editar'
-  delete: 'deltar'
+  delete: 'deletar'
+  add_video: 'adicionar video'
   home:
     index:
       title: 'Bem Vindo!'

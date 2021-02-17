@@ -8,4 +8,5 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
   has_many :articles, dependent: :nullify
+  has_many :videos, dependent: :nullify
 end
