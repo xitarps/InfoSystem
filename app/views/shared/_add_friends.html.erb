@@ -1,0 +1,9 @@
+<p>
+  <h3><%= t(:add_more_friends) %></h3>
+  <%= form_tag(friendships_path, method: "post") do %>
+    <%= collection_check_boxes(:user, :friend_ids, @nonfriends, :id, :email)%>
+    <p>
+      <%= submit_tag(t(:add_friends))%>
+    </p>
+  <% end %>
+</p>

@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     devise_for :users
     resources :users, only: %i[index show]
     patch 'toggle_admin', to: 'users#toggle_admin'
+
+    resources :friendships, only: %i[create destroy]
   end
 end

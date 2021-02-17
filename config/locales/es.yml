@@ -35,6 +35,12 @@ es:
   signup: 'registrar'
   manage: 'gerenciar(es)'
   details: 'detalhes(es)'
+  user: 'usuario(es)'
+  users: 'usuários(es)'
+  users_list: 'lista de usuários(es)'
+  friends: 'amigos(es)'
+  add_more_friends: 'Adicionar mais amigos(es)'
+  add_friends: 'adicionar amigos(es)'
   home:
     index:
       title: 'Bien Venido!'

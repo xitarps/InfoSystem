@@ -35,6 +35,12 @@ pt-BR:
   signup: 'registrar'
   manage: 'gerenciar'
   details: 'detalhes'
+  user: 'usuario'
+  users: 'usuários'
+  add_more_friends: 'Adicionar mais amigos'
+  users_list: 'lista de usuários'
+  friends: 'amigos'
+  add_friends: 'adicionar amigos'
   home:
     index:
       title: 'Bem Vindo!'

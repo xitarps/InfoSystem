@@ -1,9 +1,12 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_admin, only: %i[index show toggle_admin]
+  before_action :require_admin, only: %i[show toggle_admin]
   before_action :fetch_users, only: %i[index]
 
   def index
+    @users = User.all
+    friends = current_user.friends
+    @nonfriends = User.all.where.not('id == ?', current_user.id) - friends
   end
 
   def show

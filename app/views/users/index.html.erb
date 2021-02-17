@@ -1,9 +1,24 @@
-<h2>List of Users:</h2>
+<h2><%= t(:users_list) %>:</h2>
 
 
-<% @users.each do |user| %>
-  <p>
-    <%= user.email %> | 
-    <%= link_to t(:manage), user, id: "manage-link-#{user.id}" %>
-  </p>
+<% if current_user.admin? %>
+  <% @users.each do |user| %>
+    <p>
+      <%= user.email %> | 
+      <%= link_to t(:manage), user, id: "manage-link-#{user.id}" %>
+    </p>
+  <% end %>
 <% end %>
+
+
+
+
+<%= render partial: 'shared/add_friends' %>
+
+<p><%= t(:friends) %>:</p>
+
+<ul>
+  <% current_user.friends.each do |friend| %>
+    <li><%= friend.email %></li>
+  <% end %>
+</ul>
