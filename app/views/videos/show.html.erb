@@ -11,6 +11,11 @@
   <p>
     <%= @video.description_es%>
   </p>
+  <h6 style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+    <% @video.categories.where(language: 'es').each do |tag| %>
+      #<%= tag.name %> 
+    <% end %>
+  </h6>
   <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
     <%= @video.user.email%>
   </cite>
@@ -33,6 +38,11 @@
   <p>
     <%= @video.description_pt_br%>
   </p>
+  <h6 style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+    <% @video.categories.where(language: 'pt-BR').each do |tag| %>
+      #<%= tag.name %> 
+    <% end %>
+  </h6>
   <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
     <%= @video.user.email%>
   </cite>
