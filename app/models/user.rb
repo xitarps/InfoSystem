@@ -9,4 +9,6 @@ class User < ApplicationRecord
 
   has_many :articles, dependent: :nullify
   has_many :videos, dependent: :nullify
+
+  has_many :likes, dependent: :destroy
 end

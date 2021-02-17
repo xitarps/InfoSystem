@@ -9,6 +9,15 @@
   <p>
     <%= @article.description_es%>
   </p>
+
+  <p>
+    <%= render 'shared/like_component', object: @article %>
+  </p>
+
+  <p>
+    <%= @article.likes.count %>
+  </p>
+
   <h6 style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
     <% @article.categories.where(language: 'es').each do |tag| %>
       #<%= tag.name %> 
@@ -32,6 +41,16 @@
   <p>
     <%= @article.description_pt_br%>
   </p>
+
+  <p>
+    <%= render 'shared/like_component', object: @article %>
+  </p>
+
+  <p>
+    <%= @article.likes.count %>
+  </p>
+
+
   <h6 style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
     <% @article.categories.where(language: 'pt-BR').each do |tag| %>
       #<%= tag.name %> 

@@ -10,4 +10,6 @@ class Video < ApplicationRecord
 
   has_many :video_categories, dependent: :nullify
   has_many :categories, through: :video_categories
+
+  has_many :likes, as: :reference, dependent: :destroy
 end

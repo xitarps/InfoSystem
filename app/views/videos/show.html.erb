@@ -8,6 +8,17 @@
   <p>
     <video controls width="640" height="480" src="<%= @video.file %>"></video>
   </p>
+
+
+  <p>
+    <%= render 'shared/like_component', object: @video %>
+  </p>
+
+  <p>
+    <%= @video.likes.count %>
+  </p>
+
+
   <p>
     <%= @video.description_es%>
   </p>
@@ -35,6 +46,16 @@
   <p>
     <video controls width="640" height="480" src="<%= @video.file %>"></video>
   </p>
+
+  <p>
+    <%= render 'shared/like_component', object: @video %>
+  </p>
+
+  <p>
+    <%= @video.likes.count %>
+  </p>
+
+
   <p>
     <%= @video.description_pt_br%>
   </p>

@@ -1,0 +1,19 @@
+
+<% if current_user.likes.include?(Like.where(reference_id: object.id, user_id: current_user).first)%>
+  <%= link_to like_path(object.id), method: :delete, style: 'text-decoration: none;  font-size: 2em' do %>
+    <i class="bi bi-heart-fill"></i>
+  <% end %>
+<% else %>
+
+    <% tmp_params = { value: 0,
+                      user_id: current_user.id,
+                      reference_id: object.id,
+                      reference_type: object.class } %>
+    <%= link_to(likes_path({like: tmp_params }), method: :post, style: 'text-decoration: none; font-size: 2em' ) do %>
+      <i class="bi bi-heart"></i>
+    <% end %>
+    
+
+<% end %>
+
+

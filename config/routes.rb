@@ -13,5 +13,7 @@ Rails.application.routes.draw do
     resources :videos
 
     resources :categories, except: %i[destroy]
+
+    resources :likes, only: %i[create destroy]
   end
 end
