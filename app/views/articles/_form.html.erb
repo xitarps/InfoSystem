@@ -1,0 +1,27 @@
+<%= form_with model: @article, local: true  do |f| %>
+  <p>
+    <%= f.label :title_pt_br, t(:title_pt_br) %>:
+    <%= f.text_field :title_pt_br %>
+  </p>
+
+  <p>
+    <%= f.label :title_es, t(:title_es) %>:
+    <%= f.text_field :title_es %>
+  </p>
+
+  <p>
+    <%= f.label :description_pt_br, t(:description_pt_br) %>:
+    <%= f.text_area :description_pt_br %>
+  </p>
+
+  <p>
+    <%= f.label :description_es, t(:description_es) %>:
+    <%= f.text_area :description_es %>
+  </p>
+
+
+  <p>
+    <%= f.submit t(:save) %>
+  </p>
+
+<% end %>

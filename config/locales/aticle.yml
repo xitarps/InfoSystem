@@ -1,0 +1,16 @@
+pt-BR:
+  title: 'titulo'
+  description: 'texto'
+  active-record:
+      attributes:
+        article:
+          one: 'artigo'
+          other: 'artigos'
+es:
+  title: 'título(es)'
+  description: 'texto(es)'
+  active-record:
+      attributes:
+        article:
+          one: 'artigo(es)'
+          other: 'artigos(es)'

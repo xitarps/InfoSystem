@@ -41,6 +41,15 @@ pt-BR:
   users_list: 'lista de usuários'
   friends: 'amigos'
   add_friends: 'adicionar amigos'
+  articles: 'artigos'
+  create_article: 'criar artigo'
+  title_pt_br: 'título(pt-BR)'
+  title_es: 'título(es)'
+  description_pt_br: 'texto(pt-BR)'
+  description_es: 'texto(es)'
+  save: 'salvar'
+  edit: 'editar'
+  delete: 'deltar'
   home:
     index:
       title: 'Bem Vindo!'

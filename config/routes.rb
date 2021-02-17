@@ -7,5 +7,7 @@ Rails.application.routes.draw do
     patch 'toggle_admin', to: 'users#toggle_admin'
 
     resources :friendships, only: %i[create destroy]
+
+    resources :articles
   end
 end

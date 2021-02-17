@@ -1,0 +1,45 @@
+
+<hr>
+
+<% if I18n.locale == :es %>
+
+  <h5>
+    <%= @article.title_es%>
+  </h5>
+  <p>
+    <%= @article.description_es%>
+  </p>
+  <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+    <%= @article.user.email%>
+  </cite>
+  
+  <% if current_user.admin? %>
+    <p>
+      <%= link_to t(:edit), edit_article_path(@article) %> | 
+      <%= link_to t(:delete), @article, method: :delete %>
+    </p>
+  <% end %>
+
+<% elsif I18n.locale == :'pt-BR' %>
+  <h5>
+    <%= @article.title_pt_br%>
+  </h5>
+  <p>
+    <%= @article.description_pt_br%>
+  </p>
+  <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+    <%= @article.user.email%>
+  </cite>
+  <% if current_user.admin? %>
+    <p>
+      <%= link_to t(:edit), edit_article_path(@article) %> | 
+      <%= link_to t(:delete), @article, method: :delete %>
+    </p>
+  <% end %>
+<% end %>
+
+<hr>
+
+<p>
+  <%= link_to t(:back), articles_path %>
+</p>

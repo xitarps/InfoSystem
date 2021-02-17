@@ -1,0 +1,52 @@
+
+<% if current_user.admin? %>
+  <%= link_to t(:create_article), new_article_path %>
+  <hr>
+<% end %>
+
+
+<% if I18n.locale == :es %>
+  <% @articles.each do |article| %>
+    <div style='padding: 10px 0'>
+      <h5>
+        <%= link_to article.title_es, article %>
+      </h5>
+      <p>
+        <%= article.description_es%>
+      </p>
+      <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+        <%= article.user.email%>
+      </cite>
+      
+      <% if current_user.admin? %>
+        <p>
+          <%= link_to t(:edit), edit_article_path(article) %> | 
+          <%= link_to t(:delete), article, method: :delete %>
+        </p>
+      <% end %>
+      
+    </div>
+  <% end %>
+<% elsif I18n.locale == :'pt-BR' %>
+  <% @articles.each do |article| %>
+    <div style='padding: 10px 0'>
+      <h5>
+        <%= link_to article.title_pt_br, article %>
+      </h5>
+      <p>
+        <%= article.description_pt_br%>
+      </p>
+      <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
+        <%= article.user.email%>
+      </cite>
+      <% if current_user.admin? %>
+        <p>
+          <%= link_to t(:edit), edit_article_path(article) %> | 
+          <%= link_to t(:delete), article, method: :delete %>
+        </p>
+      <% end %>
+    </div>
+  <% end %>
+<% end %>
+
+
