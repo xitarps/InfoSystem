@@ -15,7 +15,7 @@ feature 'Visitor register movie' do
     fill_in I18n.t(:description_pt_br),	with: 'lorem(pt-BR)'
     fill_in I18n.t(:description_es),	with: 'lorem(es)'
 
-    attach_file 'File', Rails.root.join('spec', 'support', 'rabbit.mp4')
+    attach_file I18n.t(:file), Rails.root.join('spec', 'support', 'rabbit.mp4')
 
     click_on I18n.t(:save)
 

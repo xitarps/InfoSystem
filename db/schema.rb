@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_045723) do
+ActiveRecord::Schema.define(version: 2021_02_17_080343) do
+
+  create_table "article_categories", force: :cascade do |t|
+    t.integer "article_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_article_categories_on_article_id"
+    t.index ["category_id"], name: "index_article_categories_on_category_id"
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string "title_pt_br"
@@ -21,6 +30,13 @@ ActiveRecord::Schema.define(version: 2021_02_17_045723) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_articles_on_user_id"
+  end
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.string "language"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "friendships", force: :cascade do |t|
@@ -45,6 +61,15 @@ ActiveRecord::Schema.define(version: 2021_02_17_045723) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "video_categories", force: :cascade do |t|
+    t.integer "video_id", null: false
+    t.integer "category_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["category_id"], name: "index_video_categories_on_category_id"
+    t.index ["video_id"], name: "index_video_categories_on_video_id"
+  end
+
   create_table "videos", force: :cascade do |t|
     t.string "title_pt_br"
     t.string "title_es"
@@ -57,7 +82,11 @@ ActiveRecord::Schema.define(version: 2021_02_17_045723) do
     t.index ["user_id"], name: "index_videos_on_user_id"
   end
 
+  add_foreign_key "article_categories", "articles"
+  add_foreign_key "article_categories", "categories"
   add_foreign_key "articles", "users"
   add_foreign_key "friendships", "users"
+  add_foreign_key "video_categories", "categories"
+  add_foreign_key "video_categories", "videos"
   add_foreign_key "videos", "users"
 end

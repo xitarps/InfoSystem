@@ -11,5 +11,7 @@ Rails.application.routes.draw do
 
     resources :articles
     resources :videos
+
+    resources :categories, except: %i[destroy]
   end
 end

@@ -16,6 +16,6 @@ RSpec.describe Article, type: :model do
                                  description_pt_br: '',
                                  description_es: '')
     expect(article.valid?).to be_falsy
-    expect(article.errors.count).to equal(4)
+    expect(article.errors.count).to equal(3)
   end
 end

@@ -1,0 +1,8 @@
+<h2><%= t(:available_tags) %></h2>
+
+
+<% @categories.each do |category| %>
+  <p>#<%= category.name %></p>
+<% end %>
+
+<%= link_to t(:new_category), new_category_path%>

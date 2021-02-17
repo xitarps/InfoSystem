@@ -19,6 +19,10 @@
     <%= f.text_area :description_es %>
   </p>
 
+  <div class="field">
+    <%= f.label :category, t(:category) %>
+    <%= f.collection_select(:category_ids, Category.all.order(name: :asc), :id, :name, { include_blank: t(:no_category)}, { multiple: true }) %>
+  </div>
 
   <p>
     <%= f.submit t(:save) %>

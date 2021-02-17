@@ -36,6 +36,11 @@
     <%= form.file_field :file, id: :video_file %>
   </div>
 
+  <div class="field">
+    <%= form.label :category, t(:category) %>
+    <%= form.collection_select(:category_ids, Category.all.order(name: :asc), :id, :name, { include_blank: t(:no_category)}, { multiple: true }) %>
+  </div>
+
   <div class="actions">
     <%= form.submit t(:save) %>
   </div>

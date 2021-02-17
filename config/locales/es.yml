@@ -52,6 +52,14 @@ es:
   edit: 'editar(es)'
   delete: 'deletar(es)'
   add_video: 'adicionar video(es)'
+  no_category: 'nenhuma categoria(es)'
+  category: 'categoria(es)'
+  file: 'arquivo(es)'
+  tags: 'tags(es)'
+  tag: 'tag(es)'
+  available_tags: 'tags disponiveis(es)'
+  new_category: 'Adicionar nova categoria(es)'
+  category_available: 'tag disponível(es)'
   home:
     index:
       title: 'Bien Venido!'

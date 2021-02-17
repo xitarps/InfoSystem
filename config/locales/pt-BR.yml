@@ -52,6 +52,14 @@ pt-BR:
   edit: 'editar'
   delete: 'deletar'
   add_video: 'adicionar video'
+  no_category: 'nenhuma categoria'
+  category: 'categoria'
+  file: 'arquivo'
+  tags: 'tags'
+  tag: 'tag'
+  available_tags: 'tags disponiveis'
+  new_category: 'Adicionar nova categoria'
+  category_available: 'tag disponível'
   home:
     index:
       title: 'Bem Vindo!'

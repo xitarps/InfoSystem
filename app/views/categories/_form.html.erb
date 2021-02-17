@@ -1,0 +1,11 @@
+<%= form_with model: @category do |f| %>
+  <p>
+    <%= f.label :name, t(:tag) %>
+  </p>
+  <p>
+    <%= f.text_field :name %>
+  </p>
+  
+
+  <%= f.submit t(:save), disable_with: 'Submiting...' %>
+<% end %>
