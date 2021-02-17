@@ -8,6 +8,6 @@ class Video < ApplicationRecord
   validates :description_es, presence: true
   validates :file, presence: true
 
-  has_many :video_categories
+  has_many :video_categories, dependent: :nullify
   has_many :categories, through: :video_categories
 end

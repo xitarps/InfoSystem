@@ -6,6 +6,6 @@ class Article < ApplicationRecord
   validates :description_pt_br, presence: true
   validates :description_pt_br, presence: true
 
-  has_many :article_categories
+  has_many :article_categories, dependent: :destroy
   has_many :categories, through: :article_categories
 end
