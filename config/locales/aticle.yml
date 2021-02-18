@@ -7,10 +7,10 @@ pt-BR:
           one: 'artigo'
           other: 'artigos'
 es:
-  title: 'título(es)'
-  description: 'descrição(es)'
+  title: 'titulo(es)'
+  description: 'descripción'
   active-record:
       attributes:
         article:
-          one: 'artigo(es)'
-          other: 'artigos(es)'
+          one: 'artículo'
+          other: 'artículos'

@@ -1,31 +1,62 @@
 pt-BR:
   active-record:
-      attributes:
-        user:
-          confirmation_sent_at: Confirmação enviada a
-          confirmation_token: Código de confirmação
-          confirmed_at: Confirmado em
-          created_at: Criado em
-          current_password: Senha atual
-          current_sign_in_at: Data de admissão atual
-          current_sign_in_ip: IP de login atual
-          email: Email
-          encrypted_password: Senha criptografada
-          failed_attempts: Tentativas falhadas
-          last_sign_in_at: Data da última admissão
-          last_sign_in_ip: Último IP de inicialização
-          locked_at: Data de bloqueio
-          password: Senha
-          password_confirmation: Confirmação de senha
-          remember_created_at: Data de 'Me Lembrar'
-          remember_me: Me Lembrar
-          reset_password_sent_at: Data do envio do código para senha
-          reset_password_token: Código para restablecer senha
-          sign_in_count: Quantidade de logins
-          unconfirmed_email: Email não confirmado
-          unlock_token: Código de desbloqueio
-          updated_at: Atualizado em
-      models:
-        user:
-          one: Usuario
-          other: Usuarios
+    attributes:
+      user:
+        confirmation_sent_at: Confirmação enviada a
+        confirmation_token: Código de confirmação
+        confirmed_at: Confirmado em
+        created_at: Criado em
+        current_password: Senha atual
+        current_sign_in_at: Data de admissão atual
+        current_sign_in_ip: IP de login atual
+        email: Email
+        encrypted_password: Senha criptografada
+        failed_attempts: Tentativas falhadas
+        last_sign_in_at: Data da última admissão
+        last_sign_in_ip: Último IP de inicialização
+        locked_at: Data de bloqueio
+        password: Senha
+        password_confirmation: Confirmação de senha
+        remember_created_at: Data de 'Me Lembrar'
+        remember_me: Me Lembrar
+        reset_password_sent_at: Data do envio do código para senha
+        reset_password_token: Código para restablecer senha
+        sign_in_count: Quantidade de logins
+        unconfirmed_email: Email não confirmado
+        unlock_token: Código de desbloqueio
+        updated_at: Atualizado em
+    models:
+      user:
+        one: Usuario
+        other: Usuarios
+es:
+  activerecord:
+    attributes:
+      user:
+        confirmation_sent_at: Confirmación enviada a
+        confirmation_token: Código de confirmación
+        confirmed_at: Confirmado en
+        created_at: Creado en
+        current_password: Contraseña actual
+        current_sign_in_at: Fecha del ingreso actual
+        current_sign_in_ip: IP del ingreso actual
+        email: Email
+        encrypted_password: Contraseña cifrada
+        failed_attempts: Intentos fallidos
+        last_sign_in_at: Fecha del último ingreso
+        last_sign_in_ip: IP del último inicio
+        locked_at: Fecha de bloqueo
+        password: Contraseña
+        password_confirmation: Confirmación de la contraseña
+        remember_created_at: Fecha de 'Recordarme'
+        remember_me: Recordarme
+        reset_password_sent_at: Fecha de envío de código para contraseña
+        reset_password_token: Código para restablecer contraseña
+        sign_in_count: Cantidad de ingresos
+        unconfirmed_email: Email no confirmado
+        unlock_token: Código de desbloqueo
+        updated_at: Actualizado en
+    models:
+      user:
+        one: Usuario
+        other: Usuarios

@@ -60,7 +60,7 @@ pt-BR:
   available_tags: 'tags disponiveis'
   new_category: 'adicionar nova categoria'
   category_available: 'tag disponível'
-  query_field: 'campo_de_busca'
+  query_field: 'campo de busca'
   query_submit: 'bota_busca'
   result: 'resultado'
   no_results: 'Oops, não encontramos nada'

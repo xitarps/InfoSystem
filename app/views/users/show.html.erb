@@ -33,7 +33,7 @@
 
 <%= form_with(model: @user, url: toggle_ban_path , local: true) do |form| %>
 
-  <%= form.label :ban, t('.ban') %>:
+  <%= form.label :ban, t(:ban) %>:
 
   <%= form.hidden_field :id, value: @user.id %>
 
@@ -51,4 +51,4 @@
 
 <%= javascript_pack_tag 'toggles', 'data-turbolinks-track': 'reload' %>
 
-<%= link_to t(:back), :back %> |
+<%= link_to t(:back), :back %>
