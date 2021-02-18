@@ -24,7 +24,7 @@
     <%= @article.user.email.split('@').first%>
   </cite>
   
-  <% if current_user.admin? %>
+  <% if current_user.admin? &&  current_user.articles.include?(@article)%>
     <p>
       <%= link_to t(:edit), edit_article_path(@article) %> | 
       <%= link_to t(:delete), @article, method: :delete %>
@@ -57,7 +57,7 @@
   <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
     <%= @article.user.email.split('@').first%>
   </cite>
-  <% if current_user.admin? %>
+  <% if current_user.admin? &&  current_user.articles.include?(@article)%>
     <p>
       <%= link_to t(:edit), edit_article_path(@article) %> | 
       <%= link_to t(:delete), @article, method: :delete %>

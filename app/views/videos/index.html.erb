@@ -17,7 +17,7 @@
         <tr>
           <td><%= link_to video.title_es, video %></td>
 
-          <% if current_user.admin? %>
+          <% if current_user.admin? &&  current_user.videos.include?(video)%>
             <p>
               <td> | <%= link_to t(:edit), edit_video_path(video) %></td>
               <td> | <%= link_to t(:delete), video, method: :delete %></td>
@@ -47,7 +47,7 @@
         <tr>
           <td><%= link_to video.title_pt_br, video %></td>
 
-          <% if current_user.admin? %>
+          <% if current_user.admin?  &&  current_user.videos.include?(video)%>
             <p>
               <td> | <%= link_to t(:edit), edit_video_path(video) %></td>
               <td> | <%= link_to t(:delete), video, method: :delete %></td>
