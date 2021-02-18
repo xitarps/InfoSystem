@@ -5,16 +5,13 @@
   <h5>
     <%= @video.title_es %>
   </h5>
-  <p>
-    <video controls width="640" height="480" src="<%= @video.file %>"></video>
+  <p style='display: flex; justify-content:center;'>
+    <video controls style="width: 90%" src="<%= @video.file %>"></video>
   </p>
 
 
   <p>
-    <%= render 'shared/like_component', object: @video %>
-  </p>
-
-  <p>
+    <%= render 'shared/like_component', object: @video %> 
     <%= @video.likes.count %>
   </p>
 
@@ -47,15 +44,12 @@
   <h5>
     <%= @video.title_pt_br %>
   </h5>
-  <p>
-    <video controls width="640" height="480" src="<%= @video.file %>"></video>
+  <p style='display: flex; justify-content:center;'>
+    <video controls style="width: 90%" src="<%= @video.file %>"></video>
   </p>
 
   <p>
-    <%= render 'shared/like_component', object: @video %>
-  </p>
-
-  <p>
+    <%= render 'shared/like_component', object: @video %> 
     <%= @video.likes.count %>
   </p>
 

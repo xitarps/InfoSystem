@@ -2,8 +2,8 @@
 
   <div class="field">
     <%= form.label :query, t(:query_field) , style: 'display: none;' %>
-    <%= form.text_field :query, id: t(:query_field) %>
-    <%= form.button(style: 'border-radius: 10px', id: t(:query_submit)) do %>
+    <%= form.text_field :query, id: t(:query_field), style: 'margin-top: 0.5em; margin-bottom: 0.5em' %>
+    <%= form.button(style: 'border-radius: 10px; margin-left: 0.5em', id: t(:query_submit)) do %>
       <i class="bi bi-search" ></i>
     <% end %>
     
