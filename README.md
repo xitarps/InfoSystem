@@ -6,6 +6,7 @@ Sistema de provisão de conteúdo desenvolvido com o propósito de entregar proj
 Esse projeto teve o intuito de sanar os requisitos estipulados como:
 
 * Aplicação web, utilizando frameworks.
+* Sistema de cadastro/login.
 * CRUD de vídeo.
 * CRUD de artigos.
 * Criação de comentários.
@@ -13,9 +14,9 @@ Esse projeto teve o intuito de sanar os requisitos estipulados como:
 * Sistema de amizade entre usuários.
 * Sistema de gerenciamento de usuários(Tornar Admin ou banir).
 * Sistema de moderação de comentários.
-* Internacionalização - Sistema tnato em pt-Br como es.
-* Separação de features baseado no idioma.
-* sistema de avaliação de conteudo (likes).
+* Internacionalização - Sistema tanto em pt-BR como es.
+* Separação de features baseada no idioma.
+* Sistema de avaliação de conteúdo (likes).
 * Busca de conteúdo.
 
 O Sistema se encontra em estágio inicial de desenvolvimento.
