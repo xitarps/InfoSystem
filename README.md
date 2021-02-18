@@ -1,25 +1,61 @@
-# README
+# Info system
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Informações:
+Sistema de provisão de conteúdo desenvolvido com o propósito de entregar projeto para processo seletivo em tempo restrito.
 
-Things you may want to cover:
+Esse projeto teve o intuito de sanar os requisitos estipulados como:
 
-* Ruby version
+* Aplicação web, utilizando frameworks.
+* CRUD de vídeo.
+* CRUD de artigos.
+* Criação de comentários.
+* Sistema de tags.
+* Sistema de amizade entre usuários.
+* Sistema de gerenciamento de usuários(Tornar Admin ou banir).
+* Sistema de moderação de comentários.
+* Internacionalização - Sistema tnato em pt-Br como es.
+* Separação de features baseado no idioma.
+* sistema de avaliação de conteudo (likes).
+* Busca de conteúdo.
 
-* System dependencies
+O Sistema se encontra em estágio inicial de desenvolvimento.
 
-* Configuration
+Algumas propostas futuras de desenvolvimento seriam:
+* Revisão de código
+* Implementar mais testes
+* Possível refatoração de front-end
+* Melhorar desempenho das features(ex: passar para js/ajax certas features)
+* entre outros...
 
-* Database creation
+## Tecnologias envolvidas no projeto:
+* Ruby
+* Rails
+* HTML
+* CSS
+* JavaScript
+* BootStrap
+* Rspec
+* Rubocop
+* FactoryBot
+* Devise
+* PostgreSQL
+* Linux
+* Github
+* carrierwave
 
-* Database initialization
+## Default credentials:
+*in a real world scenario, it should be changed right after first login
+```
+(*seed)
+admin:
 
-* How to run the test suite
+email: admin@admin.com
+password: admin123
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
+## Screens:
 
-* ...
-# InfoSystem
+![login](git_images/prints/log_in.png)
+![credit](git_images/prints/credit.png)
+![address](git_images/prints/address.png)
