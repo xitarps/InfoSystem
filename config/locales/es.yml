@@ -64,6 +64,9 @@ es:
   query_submit: 'bota_busca(es)'
   result: 'resultado(es)'
   no_results: 'Oops, não encontramos nada(es)'
+  you_re_banned: "Oops, you've been banned!(es)"
+  ban: 'banir(es)'
+  banned: 'banido(es)'
   home:
     index:
       title: 'Bien Venido!'

@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
-  before_action :require_admin, only: %i[show toggle_admin]
+  before_action :require_admin, only: %i[show toggle_admin toggle_ban]
   before_action :fetch_users, only: %i[index]
 
   def index
@@ -17,6 +17,14 @@ class UsersController < ApplicationController
     @user = User.find(params[:user][:id])
 
     return redirect_to @user if ToggleAdmin.change(user_params)
+
+    render :show
+  end
+
+  def toggle_ban
+    @user = User.find(params[:user][:id])
+
+    return redirect_to @user if ToggleBan.change(user_params)
 
     render :show
   end

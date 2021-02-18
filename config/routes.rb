@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     devise_for :users
     resources :users, only: %i[index show]
     patch 'toggle_admin', to: 'users#toggle_admin'
+    patch 'toggle_ban', to: 'users#toggle_ban'
 
     resources :friendships, only: %i[create destroy]
 

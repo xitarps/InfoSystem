@@ -1,5 +1,14 @@
 <p>
-  <%= @user.email %> | 
+  <%= @user.email %>
+  
+  <% if  @user.admin?%>
+    (Admin)
+  <% end %>
+
+  <% if  @user.ban?%>
+    (<%= t(:banned).capitalize%>)
+  <% end %>
+   
 </p>
 
 
@@ -22,11 +31,24 @@
   </div>
 <% end %>
 
+<%= form_with(model: @user, url: toggle_ban_path , local: true) do |form| %>
 
-<script>
-  document.querySelector('#customSwitch_admin_toggle').addEventListener('change',(evt)=>{
-    document.querySelector('#btn_send_toggle_admin').click()
-  })
-</script>
+  <%= form.label :ban, t('.ban') %>:
+
+  <%= form.hidden_field :id, value: @user.id %>
+
+  <div class="custom-control custom-switch">
+    <%= form.check_box :ban, class: "custom-control-input", id: "customSwitch_ban_toggle"   %>
+    <label class="custom-control-label" for="customSwitch_ban_toggle"></label>
+  </div>
+
+  <div class="btn">
+    <%= form.button :submit , id: 'btn_send_toggle_ban', style: 'display: none;' do %>
+      botao
+    <% end %>
+  </div>
+<% end %>
+
+<%= javascript_pack_tag 'toggles', 'data-turbolinks-track': 'reload' %>
 
 <%= link_to t(:back), :back %> |
