@@ -15,5 +15,7 @@ Rails.application.routes.draw do
     resources :categories, except: %i[destroy]
 
     resources :likes, only: %i[create destroy]
+
+    get 'search', to: 'searchs#show'
   end
 end

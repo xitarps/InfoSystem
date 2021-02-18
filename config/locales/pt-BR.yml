@@ -60,6 +60,10 @@ pt-BR:
   available_tags: 'tags disponiveis'
   new_category: 'Adicionar nova categoria'
   category_available: 'tag disponível'
+  query_field: 'campo_de_busca'
+  query_submit: 'bota_busca'
+  result: 'resultado'
+  no_results: 'Oops, não encontramos nada'
   home:
     index:
       title: 'Bem Vindo!'

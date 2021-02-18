@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_17_214208) do
+ActiveRecord::Schema.define(version: 2021_02_17_224750) do
 
   create_table "article_categories", force: :cascade do |t|
     t.integer "article_id", null: false
@@ -53,6 +53,11 @@ ActiveRecord::Schema.define(version: 2021_02_17_214208) do
     t.string "reference_type"
     t.integer "user_id"
     t.integer "value", default: 0
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "searches", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

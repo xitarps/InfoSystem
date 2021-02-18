@@ -1,0 +1,12 @@
+<h2><%= t(:result)%></h2>
+
+
+<% if  @result.any? %>
+  <% @result.each do |item| %>
+    <% title = item["title#{@lang}"]%>
+    <% description = item["description#{@lang}"]%>
+    <%= link_to title ,item %>
+  <% end %>
+<% else %>
+  <%= t(:no_results)%>
+<% end %>

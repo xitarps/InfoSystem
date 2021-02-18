@@ -60,6 +60,10 @@ es:
   available_tags: 'tags disponiveis(es)'
   new_category: 'Adicionar nova categoria(es)'
   category_available: 'tag disponível(es)'
+  query_field: 'campo_de_busca(es)'
+  query_submit: 'bota_busca(es)'
+  result: 'resultado(es)'
+  no_results: 'Oops, não encontramos nada(es)'
   home:
     index:
       title: 'Bien Venido!'
