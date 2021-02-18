@@ -55,6 +55,9 @@ password: admin123
 
 ```
 
+## Trello:
+[link do trello](https://trello.com/b/Wf6C6jN7/info-system)
+
 ## Screens:
 
 ![login](images_github/screen_record.gif)
