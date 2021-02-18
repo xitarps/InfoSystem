@@ -41,7 +41,7 @@ Algumas propostas futuras de desenvolvimento seriam:
 * PostgreSQL
 * Linux
 * Github
-* carrierwave
+* Carrierwave
 
 ## Default credentials:
 *in a real world scenario, it should be changed right after first login
@@ -56,6 +56,4 @@ password: admin123
 
 ## Screens:
 
-![login](git_images/prints/log_in.png)
-![credit](git_images/prints/credit.png)
-![address](git_images/prints/address.png)
+![login](images_github/screen_record.gif)
