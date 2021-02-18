@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def index
     @users = User.all
     friends = current_user.friends
-    @nonfriends = User.all.where.not('id == ?', current_user.id) - friends
+    @nonfriends = User.all.where.not('id = ?', current_user.id) - friends
   end
 
   def show
