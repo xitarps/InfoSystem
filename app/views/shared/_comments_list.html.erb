@@ -1,0 +1,9 @@
+<% @comments.each do |comment| %>
+  <p>
+    <%= comment.description%>
+    <br>
+    <span style="font-size: 0.8em; color: rgba(0,0,0,0.8)">
+      - <%= comment.user.email.split('@').first %>
+    </span>
+  </p>
+<% end %>

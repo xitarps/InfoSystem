@@ -39,7 +39,7 @@ es:
   users: 'usuários(es)'
   users_list: 'lista de usuários(es)'
   friends: 'amigos(es)'
-  add_more_friends: 'Adicionar mais amigos(es)'
+  add_more_friends: 'adicionar mais amigos(es)'
   add_friends: 'adicionar amigos(es)'
   articles: 'artigos(es)'
   videos: 'videos(es)'
@@ -58,7 +58,7 @@ es:
   tags: 'tags(es)'
   tag: 'tag(es)'
   available_tags: 'tags disponiveis(es)'
-  new_category: 'Adicionar nova categoria(es)'
+  new_category: 'adicionar nova categoria(es)'
   category_available: 'tag disponível(es)'
   query_field: 'campo_de_busca(es)'
   query_submit: 'bota_busca(es)'
@@ -67,6 +67,13 @@ es:
   you_re_banned: "Oops, you've been banned!(es)"
   ban: 'banir(es)'
   banned: 'banido(es)'
+  comment: 'comentario(es)'
+  comments: 'comentarios(es)'
+  moderate_comments_list: 'pendentes de aprovação(es)'
+  back: 'voltar(es)'
+  language: 'idioma(es)'
+  type: 'tipo(es)'
+  approve: 'aprovar'
   home:
     index:
       title: 'Bien Venido!'

@@ -18,5 +18,7 @@ Rails.application.routes.draw do
     resources :likes, only: %i[create destroy]
 
     get 'search', to: 'searchs#show'
+
+    resources :comments, except: %i[edit]
   end
 end

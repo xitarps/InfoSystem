@@ -81,3 +81,6 @@ Style/HashTransformValues:
 
 Rails/UniqueValidationWithoutIndex:
   Enabled: false
+
+Style/CaseLikeIf:
+  Enabled: false

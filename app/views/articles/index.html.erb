@@ -12,7 +12,7 @@
         <%= link_to article.title_es, article %>
       </h5>
       <p>
-        <%= article.description_es%>
+        <%= article.description_es.truncate(10)%>
       </p>
       <h6 style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
         <% article.categories.where(language: 'es').each do |tag| %>
@@ -20,7 +20,7 @@
         <% end %>
       </h6>
       <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
-        <%= article.user.email%>
+        <%= article.user.email.split('@').first%>
       </cite>
       
       <% if current_user.admin? %>
@@ -39,7 +39,7 @@
         <%= link_to article.title_pt_br, article %>
       </h5>
       <p>
-        <%= article.description_pt_br%>
+        <%= article.description_pt_br.truncate(10)%>
       </p>
       <h6 style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
         <% article.categories.where(language: 'pt-BR').each do |tag| %>
@@ -47,7 +47,7 @@
         <% end %>
       </h6>
       <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
-        <%= article.user.email%>
+        <%= article.user.email.split('@').first%>
       </cite>
       <% if current_user.admin? %>
         <p>

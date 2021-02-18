@@ -10,4 +10,6 @@ class Article < ApplicationRecord
   has_many :categories, through: :article_categories
 
   has_many :likes, as: :reference, dependent: :destroy
+
+  has_many :comments, as: :reference, dependent: :destroy
 end

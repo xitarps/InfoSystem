@@ -24,7 +24,7 @@
     <% end %>
   </h6>
   <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
-    <%= @article.user.email%>
+    <%= @article.user.email.split('@').first%>
   </cite>
   
   <% if current_user.admin? %>
@@ -33,6 +33,10 @@
       <%= link_to t(:delete), @article, method: :delete %>
     </p>
   <% end %>
+
+  <p>
+    <%= render 'shared/comment_form', object: @article %>
+  </p>
 
 <% elsif I18n.locale == :'pt-BR' %>
   <h5>
@@ -57,7 +61,7 @@
     <% end %>
   </h6>
   <cite style='font-size: 0.8em ; color: rgba(0,0,0,0.8);'>
-    <%= @article.user.email%>
+    <%= @article.user.email.split('@').first%>
   </cite>
   <% if current_user.admin? %>
     <p>
@@ -65,10 +69,10 @@
       <%= link_to t(:delete), @article, method: :delete %>
     </p>
   <% end %>
+
+  <p>
+    <%= render 'shared/comment_form', object: @article %>
+  </p>
 <% end %>
 
-<hr>
-
-<p>
-  <%= link_to t(:back), articles_path %>
-</p>
+<%= render partial: 'shared/comments_list' %>

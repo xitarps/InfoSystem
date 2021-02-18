@@ -8,7 +8,10 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
     @article = Article.find(params[:id])
+    @comments = @article.comments.where(language: locale.to_s)
+                        .where(allowed: true)
   end
 
   def new

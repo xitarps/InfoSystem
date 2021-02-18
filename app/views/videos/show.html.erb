@@ -38,6 +38,10 @@
     </p>
   <% end %>
 
+  <p>
+    <%= render 'shared/comment_form', object: @video %>
+  </p>
+
 <% elsif I18n.locale == :'pt-BR' %>
   
   <h5>
@@ -75,4 +79,10 @@
     </p>
   <% end %>
 
+  <p>
+    <%= render 'shared/comment_form', object: @video %>
+  </p>
+
 <% end %>
+
+<%= render partial: 'shared/comments_list' %>

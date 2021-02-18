@@ -45,6 +45,6 @@ feature 'admin manage categories' do
 
     click_on I18n.t(:save)
 
-    expect(page).not_to have_content('#test_title')
+    expect(page).to have_content('#my_tag_test')
   end
 end

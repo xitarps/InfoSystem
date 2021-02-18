@@ -1,0 +1,38 @@
+
+<p>
+  id:<%= @comment.id %>
+</p>
+<p>
+  <%= t(:title) %>:
+  
+  <% if  @comment.language.eql?('pt-BR') %>
+    <%= @comment.reference.title_pt_br %>
+  <% elsif @comment.language.eql?('es')%>
+    <%= @comment.reference.title_es %>
+  <% end %>
+  
+</p>
+<p>
+  <%= t(:description) %>:
+  <%= @comment.description %>
+</p>
+<p>
+  <%= t(:type) %>:
+  (<%= @comment.reference.class %>) 
+</p>
+<p>
+  <%= t(:language) %>:
+  <%= @comment.language %>
+</p>
+
+<p>
+  <%= t(:user) %>:
+  <%= link_to @comment.user.email , @comment.user %>
+</p>
+<p>
+  <%= link_to t(:approve), @comment, method: :patch %> | 
+  <%= link_to t(:delete), @comment, method: :delete %>
+</p>
+<p>
+  <%= link_to t(:back), url_for(:back) %>
+</p>

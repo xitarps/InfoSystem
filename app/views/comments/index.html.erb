@@ -1,0 +1,16 @@
+<h4><%= t(:moderate_comments_list) %></h4>
+
+<p>
+  <%= @comments.count %> <%= t(:comments) %>
+</p>
+
+<% @comments.each do |comment| %>
+  <p>
+    <%= comment.id %> -
+    <%= comment.description.truncate(10) %> - 
+    (<%= comment.reference.class %>) -
+    <%= comment.language %> - 
+    <%= link_to t(:details), comment %>
+  </p>
+  
+<% end %>

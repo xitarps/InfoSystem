@@ -8,14 +8,14 @@ class VideosController < ApplicationController
   end
 
   def show
+    @comment = Comment.new
     @video = Video.find(params[:id])
+    @comments = @video.comments.where(language: locale.to_s)
+                      .where(allowed: true)
   end
 
   def new
     @video = Video.new
-  end
-
-  def edit
   end
 
   def create
@@ -23,6 +23,9 @@ class VideosController < ApplicationController
     return redirect_to @video if @video.save
 
     render :new
+  end
+
+  def edit
   end
 
   def update

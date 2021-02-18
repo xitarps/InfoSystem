@@ -1,6 +1,6 @@
 pt-BR:
   title: 'titulo'
-  description: 'texto'
+  description: 'descrição'
   active-record:
       attributes:
         article:
@@ -8,7 +8,7 @@ pt-BR:
           other: 'artigos'
 es:
   title: 'título(es)'
-  description: 'texto(es)'
+  description: 'descrição(es)'
   active-record:
       attributes:
         article:

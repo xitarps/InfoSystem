@@ -12,4 +12,6 @@ class Video < ApplicationRecord
   has_many :categories, through: :video_categories
 
   has_many :likes, as: :reference, dependent: :destroy
+
+  has_many :comments, as: :reference, dependent: :destroy
 end
